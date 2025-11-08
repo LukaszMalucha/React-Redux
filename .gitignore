@@ -1,0 +1,39 @@
+# ──────────────────────────────────────
+# Python
+# ──────────────────────────────────────
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+env.py
+*.env
+
+
+env/
+venv/
+.venv/
+ENV/
+
+
+.idea/
+.vscode/
+*.sublime-*
+
+# ──────────────────────────────────────
+# Node / JavaScript (frontend)
+# ──────────────────────────────────────
+
+frontend/node_modules/
+
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.pnpm-debug.log*
+
+# ──────────────────────────────────────
+# Misc / custom
+# ──────────────────────────────────────
+.~c9
+_old/
