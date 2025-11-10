@@ -1,19 +1,15 @@
-import ProfileCard from "./ProfileCard";
-import AlexaImage from "./images/alexa.png"
-import CortanaImage from "./images/cortana.png"
-import SiriImage from "./images/siri.png"
+import {useState} from "react";
 
 function App() {
+
+    const [count, setCount] = useState(0);
+    const handleClick = () => {
+        setCount(count + 1);
+    };
     return (
     <div>
-        <div>Personal Digital Assistant</div>
-
-        <ProfileCard title="Alexa" handle="@alexa99" image={AlexaImage} />
-        <ProfileCard title="Cortana" handle="@cortana12" image={CortanaImage} />
-        <ProfileCard title="Siri" handle="@siri24" image={SiriImage} />
+        <button onClick={handleClick}>Add Animal</button>
     </div>
-
-
     );
 
 }
