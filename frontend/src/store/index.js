@@ -9,9 +9,7 @@ const songsSlice = createSlice({
         },
         removeSong(state, action) {
 
-
         }
-
 
     }
 });
@@ -22,4 +20,18 @@ const store = configureStore({
    }
 });
 
-console.log(store);
+const startingState = store.getState();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
