@@ -1,17 +1,21 @@
-import {useState} from "react";
+import "./styles.css";
+import MoviePlaylist from "./components/MoviePlaylist";
+import SongPlaylist from "./components/SongPlaylist";
 
-function App() {
+export default function App() {
+  const handleResetClick = () => {
+    //
+  };
 
-    const [count, setCount] = useState(0);
-    const handleClick = () => {
-        setCount(count + 1);
-    };
-    return (
-    <div>
-        <button onClick={handleClick}>Add Animal</button>
+  return (
+    <div className="container is-fluid">
+      <button onClick={() => handleResetClick()} className="button is-danger">
+        Reset Both Playlists
+      </button>
+      <hr />
+      <MoviePlaylist />
+      <hr />
+      <SongPlaylist />
     </div>
-    );
-
+  );
 }
-
-export default App;

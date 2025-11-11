@@ -7,6 +7,8 @@ npx create-react-app frontend
 
 npm install redux react-redux redux-thunk
 
+npm install @reduxjs/toolkit react-redux
+
 npm install @redux-devtools/extension
 
 npm install react-router-dom react-router-bootstrap
