@@ -20,7 +20,15 @@ const store = configureStore({
    }
 });
 
-const startingState = store.getState();
+export { store };
+export const { addSong } = songsSlice.actions;
+
+
+
+
+
+
+
 
 
 
