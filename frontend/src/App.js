@@ -1,25 +1,37 @@
-import "./styles.css";
-import { useDispatch } from "react-redux";
-import MoviePlaylist from "./components/MoviePlaylist";
-import SongPlaylist from "./components/SongPlaylist";
-import { reset } from "./store/actions";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Root from "./views/Root";
+import HomePage from "./views/HomePage";
+import SearchPage from "./views/SearchPage";
+import DetailsPage from "./views/DetailsPage";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    children: [
+      {
+        index: true,
+        element: <HomePage />
+      },
+      {
+        path: "/search",
+        element: <SearchPage />,
+        loader: () => {
+          return ["zxc", "asd"]
+        }
+      },
+      {
+        path: "/packages/:name",
+        element: <DetailsPage />
+      },
+    ]
+  }
+
+
+])
 
 export default function App() {
-  const dispatch = useDispatch();
 
-  const handleResetClick = () => {
-    dispatch(reset());
-  };
+  return <RouterProvider router={router} />
 
-  return (
-    <div className="container is-fluid">
-      <button onClick={() => handleResetClick()} className="button is-danger">
-        Reset Both Playlists
-      </button>
-      <hr />
-      <MoviePlaylist />
-      <hr />
-      <SongPlaylist />
-    </div>
-  );
 }
